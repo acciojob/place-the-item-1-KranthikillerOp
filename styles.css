@@ -1,2 +1,20 @@
+/* CSS for the holder class */
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Items will be spaced and the first and last will touch the ends */
+}
 
-/* Your CSS Code here. */
+/* CSS for the item class */
+.item {
+  flex: 0 0 calc(33.333% - 10px); /* Adjust the width and spacing based on the desired layout */
+  margin-bottom: 10px; /* Adjust spacing between items as needed */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Media query for responsive design (optional) */
+@media (max-width: 767px) {
+  .item {
+    flex: 0 0 calc(50% - 10px); /* Adjust for two items per row on smaller screens */
+  }
+}
